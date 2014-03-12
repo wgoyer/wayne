@@ -1,0 +1,28 @@
+{
+  "name": "wayne",
+  "version": "0.0.1",
+  "description": "Personal page",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gihub.com/wgoyer/wayne.git"
+  },
+  "keywords": [
+    "Wayne",
+    "Goyer",
+    "Wayne Goyer",
+    "Personal Site"
+  ],
+  "author": "Wayne",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~3.4.8",
+    "jade": "~1.3.0"
+  },
+  "engines": {
+    "node": "0.8.15"
+  }
+}
