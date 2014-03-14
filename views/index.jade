@@ -1,6 +1,9 @@
 html
-	head
-		include partials/head
-	body
-		p Hello World
-		h3 Hello World
+    head
+        include partials/head
+    body
+        h3 Hello World
+        ul(class = "dropdown-menu")
+            -for(i=0;i<users.length;i++){
+                li #{users[i].Name}
+                -}

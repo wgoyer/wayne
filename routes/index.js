@@ -1,3 +1,8 @@
+var theMongo = require('./theMongo.js');
+
 exports.index = function(req, res){
-	res.render('index');
+    theMongo.consoleUsers(function(userArray){
+        res.render('index', {users: userArray});    
+    });
+	
 };
