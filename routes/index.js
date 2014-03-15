@@ -4,5 +4,4 @@ exports.index = function(req, res){
     theMongo.consoleUsers(function(userArray){
         res.render('index', {users: userArray});    
     });
-	
 };

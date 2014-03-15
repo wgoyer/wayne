@@ -23,7 +23,6 @@ var getData = function(collection, users, callback){
 
 var consoleUsers = function(callback){
     getUsers('users', function(userArray){
-        // console.log(userArray);
         callback(userArray);
     });
 };
