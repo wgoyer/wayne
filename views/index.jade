@@ -25,7 +25,7 @@ html
             div(class = "well")
                 .contents
                     p My Database List
-                    ul
+                    ul(id="sortable")
                         -for(i=0;i<users.length;i++){
                             li #{users[i].Name}
                         -}

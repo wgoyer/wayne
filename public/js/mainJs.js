@@ -4,6 +4,7 @@ window.onload = function(){
     for(var i=0;i<menuItems.length;i++){
         addMenuEvents(menuItems[i]);
     }
+    $("#sortable").sortable();
 };
 
 var addMenuEvents = function(menuItem){
