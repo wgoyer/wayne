@@ -11,7 +11,7 @@ html
                         span(class="icon-bar")
                         span(class="icon-bar")
                         span(class="icon-bar")
-                    a(class="navbar-brand" href="#") Wayne Goyer
+                    a(class="navbar-brand") Wayne Goyer
                 div(class="collapse navbar-collapse")
                     ul(class="nav navbar-nav")
                         li.menu(class="active")
@@ -21,9 +21,11 @@ html
                         li.menu
                             a(href="#about") About
         div(class = "container")
-            .contents
-                h3 My Database List
-                ul
-                    -for(i=0;i<users.length;i++){
-                        li #{users[i].Name}
-                    -}
+            h3 Welcome!
+            div(class = "well")
+                .contents
+                    p My Database List
+                    ul
+                        -for(i=0;i<users.length;i++){
+                            li #{users[i].Name}
+                        -}

@@ -3,7 +3,6 @@ window.onload = function(){
     var menuItems = document.getElementsByClassName('menu');
     for(var i=0;i<menuItems.length;i++){
         addMenuEvents(menuItems[i]);
-
     }
 };
 

@@ -2,7 +2,6 @@ var express = require('express')
 , fs = require('fs')
 , path = require('path')
 , index = require('./routes/index.js')
-, theMongo = require('./routes/theMongo.js')
 
 var app = express();
 
@@ -19,7 +18,6 @@ app.get('/', index.index);
 app.get('/public/*', function(req, res){
 	res.sendfile(__dirname + req.url);
 });
-// app.post('/:user/update', theMongo.update)
 
 app.get("*", function(req, res){
 	res.send("Page not found.", 404);
