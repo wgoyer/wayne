@@ -10,6 +10,19 @@ body {
 	font-weight: bold;
 }
 #sortable {
-    border: 2px dashed black;
-    list-style: none;
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    width: 60%;
+}
+ #sortable li { 
+     margin: 0 3px 3px 3px; 
+     padding: 0; 
+     padding-left: 1.5em; 
+     font-size: 12px; 
+     height: 18px; 
+}
+ #sortable li span { 
+     position: absolute; 
+     margin-left: -1.3em; 
 }

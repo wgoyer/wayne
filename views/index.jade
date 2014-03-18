@@ -2,7 +2,7 @@ html
     head
         title Wayne Goyer
         include partials/head
-    body
+        body(class="jquery-ui")
         div(class = "navbar navbar-inverse navbar-fixed-top" role="navigation")
             div(class = "container")
                 div(class="navbar-header")
@@ -27,5 +27,7 @@ html
                     p My Database List
                     ul(id="sortable")
                         -for(i=0;i<users.length;i++){
-                            li #{users[i].Name}
-                        -}
+                            li(class="ui-state-default")
+                                span(class="ui-icon ui-icon-arrowthick-2-n-s")
+                                | #{users[i].Name}
+                                -}
