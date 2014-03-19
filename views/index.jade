@@ -16,11 +16,17 @@ html
                     ul(class="nav navbar-nav")
                         li.menu(class="active")
                             a(href="#") Home
-                        li.menu
-                            a(href="#projects") Projects
+                        li.menu.dropdown
+                            a.dropdown-toggle(data-toggle="dropdown" href="#projects") Projects
+                                b.caret
+                            ul.dropdown-menu
+                                li
+                                    a(href="http://75.171.143.202:8080" target="_blank") BF4 Stats
+                                li
+                                    a(href="#herokuHowTo") How to Heroku
                         li.menu
                             a(href="#about") About
-        div(class = "container")
+        div(id = "main-container" class = "container")
             h3 Welcome!
             div(class = "well")
                 .contents
@@ -30,4 +36,4 @@ html
                             li(class="ui-state-default")
                                 span(class="ui-icon ui-icon-arrowthick-2-n-s")
                                 | #{users[i].Name}
-                                -}
+                        -}
