@@ -4,31 +4,33 @@ window.onload = function(){
     for(var i=0;i<menuItems.length;i++){
         addMenuEvents(menuItems[i]);
     }
+    if(location.hash !== ""){
+        changeActiveMenu();
+        loadHashPage();
+    }
     $("#sortable").sortable();
 };
-
 window.onhashchange = function(){
-    var hashURI = "";
-    if(location.hash===""){
-        hashURI = "/public/html/home.html";
-    } else {
-        hashURI = "/public/html/"+location.hash.substr(1)+".html";
-    }
-    $.ajax({
-        type: 'GET',
-        url: hashURI,
-        beforeSend: function(){
-            $(".contents").html('<h3>The user wants to see</h3> '+location.hash);
-        }
-    }).success(function(data){
-        $(".contents").html(data);
-    });
-
+    loadHashPage();
 };
-
 var addMenuEvents = function(menuItem){
     menuItem.addEventListener("click", function(){
        $(".active").removeClass("active");
        $(event.target).parent().addClass("active");
     });
 };
+
+var loadHashPage = function(){
+    var hashURI = "";
+    if(location.hash===""){
+        hashURI = "/public/html/home.html";
+    } else {
+        hashURI = "/public/html/"+location.hash.substr(1)+".html";
+    }
+    $(".contents").load(hashURI);
+}
+
+var changeActiveMenu = function(){
+    $(".active").removeClass("active");
+    $('a[href='+location.hash+']').parent().addClass("active");
+}
