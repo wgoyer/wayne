@@ -1,5 +1,4 @@
 window.onload = function(){
-    //Active menu code.  Add event listener on each menu item to change class of li when clicked.
     var menuItems = document.getElementsByClassName('menu');
     for(var i=0;i<menuItems.length;i++){
         addMenuEvents(menuItems[i]);
@@ -12,14 +11,15 @@ window.onload = function(){
 };
 window.onhashchange = function(){
     loadHashPage();
+    return false;
 };
 var addMenuEvents = function(menuItem){
-    menuItem.addEventListener("click", function(){
+    $(menuItem).on("click", function(){
        $(".active").removeClass("active");
        $(event.target).parent().addClass("active");
     });
+    return false;
 };
-
 var loadHashPage = function(){
     var hashURI = "";
     if(location.hash===""){
@@ -27,10 +27,21 @@ var loadHashPage = function(){
     } else {
         hashURI = "/public/html/"+location.hash.substr(1)+".html";
     }
-    $(".contents").load(hashURI);
-}
-
+    $(".contents").load(hashURI, function(){
+        if(location.hash==="#herokuHowTo"){
+            $(".contents a").hover(function(e){
+                var x = e.clientX,
+                    y = e.clientY;
+                $('.imgMouseOver1').css({top: y, left : x}).show();
+            }, function(){
+                $('.imgMouseOver1').hide();
+            });
+        }
+    });
+    return false;
+};
 var changeActiveMenu = function(){
     $(".active").removeClass("active");
     $('a[href='+location.hash+']').parent().addClass("active");
-}
+    return false;
+};

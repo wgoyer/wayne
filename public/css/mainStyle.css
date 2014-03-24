@@ -4,7 +4,6 @@ body {
 .contents {
     border-radius: 5px;
 }
-
 .well p {
 	font-size: 16px;
 	font-weight: bold;
@@ -15,14 +14,29 @@ body {
     padding: 0; 
     width: 60%;
 }
- #sortable li { 
+#sortable li { 
      margin: 0 3px 3px 3px; 
      padding: 0; 
      padding-left: 1.5em; 
      font-size: 12px; 
      height: 18px; 
 }
- #sortable li span { 
+#sortable li span {
      position: absolute; 
      margin-left: -1.3em; 
+}
+.well .contents h3 {
+    margin-top:0;
+}
+.well .contents p {
+    font-weight: normal;
+}
+.well .contents img {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+.imgMouseOver1 {
+    position: absolute;
+    display: none;
 }
