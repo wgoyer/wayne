@@ -28,13 +28,15 @@ var loadHashPage = function(){
         hashURI = "/public/html/"+location.hash.substr(1)+".html";
     }
     $(".contents").load(hashURI, function(){
+        var theImage = ".imgMouseOver1";
         if(location.hash==="#herokuHowTo"){
             $(".contents a").hover(function(e){
+                if(e.target.id === "cat") theImage = ".imgMouseOver2";
                 var x = e.clientX,
                     y = e.clientY;
-                $('.imgMouseOver1').css({top: y, left : x}).show();
+                $(theImage).css({top: y, left : x}).show();
             }, function(){
-                $('.imgMouseOver1').hide();
+                $(theImage).hide();
             });
         }
     });
