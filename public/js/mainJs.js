@@ -27,11 +27,25 @@ var loadHashPage = function(){
     } else {
         hashURI = "/public/html/"+location.hash.substr(1)+".html";
     }
-    $(".contents").load(hashURI, function(){
-        var theImage = ".imgMouseOver1";
+    loadImageOnHover(hashURI);
+    return false;
+};
+var changeActiveMenu = function(){
+    $(".active").removeClass("active");
+    $('a[href='+location.hash+']').parent().addClass("active");
+    return false;
+};
+
+var loadImageOnHover = function(uri){
+    $(".contents").load(uri, function(){
+    var theImage = ".imgMouseOver1";
         if(location.hash==="#herokuHowTo"){
             $(".contents a").hover(function(e){
-                if(e.target.id === "cat") theImage = ".imgMouseOver2";
+                if(e.target.id === "cat") {
+                    theImage = ".imgMouseOver2";
+                } else {
+                    theImage = ".imgMouseOver1";
+                }
                 var x = e.clientX,
                     y = e.clientY;
                 $(theImage).css({top: y, left : x}).show();
@@ -40,10 +54,5 @@ var loadHashPage = function(){
             });
         }
     });
-    return false;
-};
-var changeActiveMenu = function(){
-    $(".active").removeClass("active");
-    $('a[href='+location.hash+']').parent().addClass("active");
     return false;
 };
