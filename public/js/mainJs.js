@@ -32,9 +32,7 @@ var loadHashPage = function(){
 };
 var changeActiveMenu = function(){
     $(".active").removeClass("active");
-    if($('a[href='+location.hash+']')) {
-        $('a[href='+location.hash+']').parent().addClass("active"); 
-    }
+    $('a[href='+location.hash.split('/')[0]+']').parent().addClass("active"); 
     return false;
 };
 
