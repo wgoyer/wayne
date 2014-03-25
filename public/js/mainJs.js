@@ -32,18 +32,20 @@ var loadHashPage = function(){
 };
 var changeActiveMenu = function(){
     $(".active").removeClass("active");
-    $('a[href='+location.hash+']').parent().addClass("active");
+    if($('a[href='+location.hash+']')) {
+        $('a[href='+location.hash+']').parent().addClass("active"); 
+    }
     return false;
 };
 
 var loadImageOnHover = function(uri){
     $(".contents").load(uri, function(){
-    var theImage = ".imgMouseOver1";
+    var theImage = "";
         if(location.hash==="#herokuHowTo"){
             $(".contents a").hover(function(e){
                 if(e.target.id === "cat") {
                     theImage = ".imgMouseOver2";
-                } else {
+                } else if (e.target.id === "baby"){
                     theImage = ".imgMouseOver1";
                 }
                 var x = e.clientX,
@@ -51,6 +53,7 @@ var loadImageOnHover = function(uri){
                 $(theImage).css({top: y, left : x}).show();
             }, function(){
                 $(theImage).hide();
+                theImage = "";
             });
         }
     });
