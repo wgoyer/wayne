@@ -32,7 +32,7 @@ var loadHashPage = function(){
 };
 var changeActiveMenu = function(){
     $(".active").removeClass("active");
-    $('a[href='+location.hash.split('/')[0]+']').parent().addClass("active"); 
+    $('a[href='+location.hash.split('/')[0]+']').parent().addClass("active");
     return false;
 };
 

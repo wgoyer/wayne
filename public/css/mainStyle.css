@@ -40,3 +40,26 @@ body {
     position: absolute;
     display: none;
 }
+pre {
+    float: left;
+    margin-right:15px ;
+    width: 450px;
+}
+.well .contents .nodeImg {
+    height: 300px;
+    width: 450px;
+}
+.rightP {
+    float: right;
+    margin-right: 175px;
+}
+div .nodeImg {
+    float: left;
+    margin-right: 10px;
+}
+
+.well .contents .nodeBrowser {
+    height: 300px;
+    width: 450px;
+    margin-top: 15px;
+}
