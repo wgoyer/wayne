@@ -1,49 +1,57 @@
-<p>
-	Javascript is the language of the web.  If you're browsing the web, your
-	browser is utilizing javascript to make things happen and display correctly. The
-	browser reads and interprets the javascript included on the page and applies it to your view.  Back in 2009, Ryan Dahl created nodeJS; a javascript
-	based server side platform.  Node is based on google's V8 javascript engine and 
-	makes web client/web server interactions a bit more fluid in my opinion.
-</p>
-<p>
-	For our example, we will be using node to run our web server.  The installation 
-	process is fairly straight forward.  Browse on over to <a href="http://nodejs.org/" target="_blank">NodeJS</a> and click on the install button.
-	Once the install completes, you can make sure it works by creating a very simple "hello world app".
-</p>
-<div class="intWell">
-<pre>
-var http = require('http');
+<div class="col-md-12">
+    <p>
+    	Javascript is the language of the web.  If you're browsing the web, your
+    	browser is utilizing javascript to make things happen and display correctly. The
+    	browser reads and interprets the javascript included on the page and applies it to your view.  Back in 2009, Ryan Dahl created nodeJS; a javascript
+    	based server side platform.  Node is based on google's V8 javascript engine and
+    	makes web client/web server interactions a bit more fluid in my opinion.
+    </p>
+    <p>
+    	For our example, we will be using node to run our web server.  The installation
+    	process is fairly straight forward.  Browse on over to <a href="http://nodejs.org/" target="_blank">NodeJS</a> and click on the install button.
+    	Once the install completes, you can make sure it works by creating a very simple "hello world app".
+    </p>
+</div>
+<div>
+    <div class="col-md-5">
+        <pre>
+ var http = require('http');
 
-var server = http.createServer(function(req, res){
-	res.writeHead(200);
-	res.write('Hello World.');
-	res.end();
-});
+ var server = http.createServer(function(req, res){
+ 	res.writeHead(200);
+ 	res.write('Hello World.');
+ 	res.end();
+ });
 
-server.listen('8989', function(){
-	console.log('Server is running on port 8989...');
-});
-</pre>
-<p>
-	You can copy and paste the code into a file called <i>app.js</i> and run it from the command line
-	using the command <i>node app.js</i> from the directory the file was created in.<br>
-</p> 
-	<div class = "nodeImg"><img class = "nodeImg" src = "/public/img/herokuHowTo/nodeApp.png" /></div>
-<p>
-	Once your console shows the message displayed in the screenshot, you can access your brand new web server 
-	by pointing your browser to it.  Browse to <a href = "http://127.0.0.1:8989" target="_blank">http://127.0.0.1:8989</a> and you should see 
-	the delightful "Hello World." message we've all grown so fond of.  
-</p>
-<img class = "nodeBrowser" src = "/public/img/herokuHowTo/nodeBrowser.png" />
-<div style = "margin-left: 25px; float:left">
-<p>
-	Now that this is done, you are ready to move on to getting your github account set up.  If you have more interest in all things node, however,
-	here are a few links you might be interested in.  NodeJS has a great following, with tons of support, information and APIs to play with.
-	<ul>
-		<li><a href="">learnyounode</a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-	</ul>
-</p>
+ server.listen('8989', function(){
+ 	console.log('Server is running on port 8989...');
+ });
+        </pre>
+
+    <img class = "nodeBrowser" src = "/public/img/herokuHowTo/nodeBrowser.png" />
+
+    </div>
+<div class="col-md-7">
+ <div>
+ 	You can copy and paste the code into a file called <i>app.js</i> and run it from the command line
+ 	using the command <i>node app.js</i> from the directory the file was created in.<br>
+ </div>
+ <img class = "nodeImg" src = "/public/img/herokuHowTo/nodeApp.png" />
+ <div>
+ 	Once your console shows the message displayed in the screenshot, you can access your brand new web server
+ 	by pointing your browser to it.  Browse to <a href = "http://127.0.0.1:8989" target="_blank">http://127.0.0.1:8989</a> and you should see
+ 	the delightful "Hello World." message we've all grown so fond of.
+ </div>
+ <div>
+ 	Now that this is done, you are ready to move on to getting your github account set up.  If you have more interest in all things node, however,
+ 	here are a few links you might be interested in.  NodeJS has a great following, with tons of support, information and APIs to play with.
+ 	<ul>
+ 		<li><a href="">learnyounode</a></li>
+ 		<li><a href=""></a></li>
+ 		<li><a href=""></a></li>
+ 		<li><a href=""></a></li>
+ 	</ul>
+ </div>
+</div>
+<div class="clearfix"></div>
 </div>
