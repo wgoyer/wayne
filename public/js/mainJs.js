@@ -55,5 +55,8 @@ var loadImageOnHover = function(uri){
             });
         }
     });
+    $(".navButtons").load("/public/html/navButtons.html", function(){
+        console.log('hello...');
+    });
     return false;
 };

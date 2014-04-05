@@ -63,3 +63,7 @@ div .nodeImg {
     width: 450px;
     margin-top: 15px;
 }
+
+.well .contents .header {
+    font-weight: bold;
+}
